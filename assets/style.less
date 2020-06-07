@@ -1,0 +1,93 @@
+@width-mobile: 320px;
+@width-wide-mobile: 767px;
+@width-tablet: 959px;
+@width-descktop: 1219px;
+@color-facebook: #3b5998;
+@color-google: #ea4335;
+
+.container {
+  width: 87%;
+  margin: auto;
+}
+.slick-arrow .slick-prev .slick-disabled {
+  background-color: red;
+}
+.container-form-auth {
+  padding: 30px;
+  border-radius: 8px;
+  margin: 30px auto;
+  width: 40%;
+  background-color: rgb(243, 243, 243);
+  border: 1px solid #00263b;
+  position: relative;
+  @media (min-width: @width-mobile) and (max-width: @width-tablet) {
+    width: 95%;
+    padding: 10px;
+  }
+  .header-auth {
+    flex-direction: column;
+  }
+}
+
+.header {
+  position: sticky;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+  height: 60px;
+  background: rgb(243, 243, 243);
+  border-bottom: 1px #00263b solid;
+  @media (max-width: @width-mobile) {
+    height: 50px;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    .btn-menu {
+      padding: 0 5px;
+    }
+  }
+}
+
+.logo-content {
+  .logo {
+    width: 40px;
+    cursor: pointer;
+  }
+}
+// position-right
+.p-r {
+  display: flex;
+  justify-content: end;
+}
+
+// position center
+.p-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// color-white
+.c-w {
+  color: #fff;
+}
+
+.btn-facebook {
+  background: @color-facebook;
+  border-color: @color-facebook;
+}
+
+.btn-google {
+  background: @color-google;
+  border-color: @color-google;
+}
+
+.container-card-list {
+  border: 1px solid #00263b;
+  margin-bottom: 22px;
+  background-color: rgb(243, 243, 243);
+}
