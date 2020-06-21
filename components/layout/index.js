@@ -26,11 +26,9 @@ function LayoutComponent({ children }) {
           <div style={{ border: "1px solid #00263b", margin: "16px 0",padding: 8, background: "rgb(243, 243, 243)" }}>
             {data.length > 0
               ? data.map((el, i) => (
-                <>
                   <Button type="primary" key={i} style={{ margin: "8px 10px" }}>
                     {el.name}
                   </Button>
-               </>
                 ))
               : null}
           </div>

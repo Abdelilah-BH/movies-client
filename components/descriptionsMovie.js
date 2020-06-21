@@ -16,7 +16,7 @@ export default function DescriptionsMovie({ data }) {
         ) : null}
         <Descriptions.Item label="Type">{data.type}</Descriptions.Item>
         <Descriptions.Item label="Rating">
-          <Rate disabled defaultValue={data.rating} />
+          <Rate disabled defaultValue={data.rating / 2} />
           <span>{` - ${data.voice} voices`}</span>
         </Descriptions.Item>
         <Descriptions.Item label="Precession">{data.precession}</Descriptions.Item>

@@ -4,10 +4,10 @@ import { Breadcrumb, Row, Col } from "antd";
 import ReactPlayer from "react-player";
 import Link from "next/link";
 import { HomeOutlined } from "@ant-design/icons";
-import Descriptions from "../../components/descriptionsMovie";
-import { Get_movie } from "../../redux/action/movie";
-import { Get_subcategories } from "../../redux/action/subcategory";
-import MenuSubCategory from "../../components/menuSubcategory";
+import Descriptions from "../../../components/descriptionsMovie";
+import { Get_movie } from "../../../redux/action/movie";
+import { Get_subcategories } from "../../../redux/action/subcategory";
+import MenuSubCategory from "../../../components/menuSubcategory";
 
 export default function Movie() {
   const data_movie = useSelector((state) => state.movie.data);

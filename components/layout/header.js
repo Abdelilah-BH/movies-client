@@ -46,7 +46,6 @@ function HeaderComponent() {
               </Drawer>
             </>
           ) : null}
-          ;
           <div className="logo-content">
             <Link href="/" as="/">
               <a>

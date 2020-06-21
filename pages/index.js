@@ -1,27 +1,16 @@
+import React from "react";
 import Head from "next/head";
-import { useSelector } from "react-redux";
-import ListMoviesCards from "../components/cards/movies";
-import { Get_subcategories } from "../redux/action/subcategory";
+import { getInitialLocale } from "../translations/getInitialLocale";
 
-export default function Home() {
-  const { data } = useSelector((state) => state.sub_categories);
+const Index = () => {
+  React.useEffect(() => {
+    window.location.replace(`/${getInitialLocale()}`);
+  }, []);
   return (
-    <>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        <ListMoviesCards sub_categories={data}/>
-        <ListMoviesCards sub_categories={data}/>
-        <ListMoviesCards sub_categories={data}/>
-        <ListMoviesCards sub_categories={data}/>
-      </main>
-    </>
+    <Head>
+      <meta name="robots" content="noindex, nofollow" />
+    </Head>
   );
-}
-
-Home.getInitialProps = async ({ reduxStore }) => {
-  await reduxStore.dispatch(Get_subcategories());
-  return {};
 };
+
+export default Index;

@@ -48,9 +48,9 @@ const settings = {
 export default function Card({ movies }) {
   return (
     <Slider {...settings}>
-      {movies.map((el, i) => {
+      {movies.map(el => {
         return (
-          <Link key={i} href={`/movie/[id]`} as={`/movie/${el.id}`}>
+          <Link key={el.id} href={`/movie/[id]`} as={`/movie/${el.id}`}>
             <a>
             <div
               className="p-c"
@@ -59,7 +59,7 @@ export default function Card({ movies }) {
                 <img src={`http://localhost:1337${el.cover.url}`} width="140" height="200" />
               </div>
               <div style={{ paddingTop: 7 }}>
-                <Rate disabled defaultValue={5} />
+                <Rate disabled defaultValue={el.rating / 2} />
               </div>
               <div style={{ paddingBottom: 7 }}>
                 <span style={{ fontSize: 14, color: "#000" }}>{el.title}</span>
